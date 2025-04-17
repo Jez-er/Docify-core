@@ -1,0 +1,29 @@
+{
+	"name": "astral-docify",
+	"version": "0.0.20",
+	"type": "module",
+	"main": "dist/docify.cjs.js",
+	"module": "dist/docify.es.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@tanstack/react-router": "^1.116.0",
+		"@types/node": "^22.14.1",
+		"@types/react": "^19.1.2",
+		"react": "^19.1.0",
+		"typescript": "~5.7.2",
+		"vite": "^6.3.1",
+		"vite-plugin-dts": "^4.5.3"
+	},
+	"peerDependencies": {
+		"@tanstack/react-router": "^1.x",
+		"react": "^19.0.0"
+	}
+}
