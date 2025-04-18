@@ -6,10 +6,16 @@ import {
 	Outlet,
 } from '@tanstack/react-router'
 import React from 'react'
-import { Sidebar } from '../components/SideBar'
+import DocifyHeader from '../components/Header'
+import Sidebar from '../components/SideBar'
 
 const rootRoute = createRootRoute({
-	component: () => <Outlet />,
+	component: () => (
+		<>
+			<DocifyHeader />
+			<Outlet />
+		</>
+	),
 })
 
 export const createLayout = (
@@ -32,7 +38,6 @@ export function getDynamicRoutes(
 	pages: Record<string, () => Promise<any>>,
 	sidebarsPath: Record<string, () => Promise<any>>
 ) {
-	console.log(`genRoutes: ${sidebarsPath}`)
 	const layoutMap = new Map<string, AnyRoute>()
 	const dynamicRoutes: AnyRoute[] = []
 
@@ -68,7 +73,6 @@ function createAppRouter(
 	sidebarsPath: Record<string, () => Promise<any>>,
 	customRoutes: AnyRoute[]
 ) {
-	console.log(`creator: ${sidebarsPath}`)
 	const dynamicRoutes = getDynamicRoutes(pages, sidebarsPath)
 	return createRouter({
 		routeTree: rootRoute.addChildren([...dynamicRoutes, ...customRoutes]),

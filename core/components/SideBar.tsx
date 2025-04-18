@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import getSidebarByBasePath from '../router/SideBarTreeBuilder'
 import { SidebarItem, SidebarProps } from '../types/SideBar'
 
-export const Sidebar: React.FC<SidebarProps> = ({ basePath, sidebars }) => {
+const Sidebar: React.FC<SidebarProps> = ({ basePath, sidebars }) => {
 	const [sidebarItems, setSidebarItems] = useState<SidebarItem[] | undefined>(
 		undefined
 	)
@@ -41,3 +41,5 @@ export const Sidebar: React.FC<SidebarProps> = ({ basePath, sidebars }) => {
 		</div>
 	)
 }
+
+export default Sidebar

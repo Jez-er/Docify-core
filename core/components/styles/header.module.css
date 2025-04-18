@@ -1,0 +1,28 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	background-color: var(--primary-color);
+}
+
+.header__logo {
+	display: flex;
+	gap: 0.5vw;
+}
+
+.header__logo__title {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.header__navigation {
+	display: flex;
+	gap: 1vw;
+}
+
+.header__navigation__item {
+	font-size: 18px;
+	font-weight: 500;
+}
