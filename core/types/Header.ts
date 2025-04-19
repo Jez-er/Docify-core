@@ -4,8 +4,8 @@ interface HeaderPaths {
 }
 
 interface HeaderStyles {
-	padding_x: number
-	padding_y: number
+	padding_x?: number
+	padding_y?: number
 }
 
 export interface HeaderConfig {

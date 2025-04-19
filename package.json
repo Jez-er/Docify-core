@@ -1,6 +1,6 @@
 {
 	"name": "astral-docify",
-	"version": "0.1.8",
+	"version": "0.1.14",
 	"type": "module",
 	"main": "dist/docify.cjs.js",
 	"module": "dist/docify.es.js",
@@ -9,9 +9,10 @@
 		"dist"
 	],
 	"scripts": {
-		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview"
+		"pub:alfa": "npm publish --tag alfa",
+		"pub:beta": "npm publish --tag beta",
+		"pub:latest": "npm publish --tag latest"
 	},
 	"devDependencies": {
 		"@tanstack/react-router": "^1.116.0",

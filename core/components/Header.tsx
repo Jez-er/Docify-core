@@ -7,8 +7,8 @@ const DocifyHeader = () => {
 
 	if (!config) return null
 
-	const paddingX = config.styles?.padding_x || 100
-	const paddingY = config.styles?.padding_y || 10
+	const paddingX = config.styles?.padding_x || 200
+	const paddingY = config.styles?.padding_y || 20
 
 	return (
 		<header
@@ -20,11 +20,15 @@ const DocifyHeader = () => {
 				paddingBottom: paddingY,
 			}}
 		>
-			<div>
-				<div className={st.header__logo}>
-					<img src={config.logoPath} alt='DocifyLogo' />
+			<div style={{ display: 'flex', gap: '5vw', alignItems: 'center' }}>
+				<a href='/' className={st.header__logo}>
+					<img
+						src={config.logoPath}
+						alt='DocifyLogo'
+						className={st.header__logo__img}
+					/>
 					<h2 className={st.header__logo__title}>{config.title}</h2>
-				</div>
+				</a>
 				<div className={st.header__navigation}>
 					{config.navigation?.map((link, index) => (
 						<a

@@ -1,6 +1,7 @@
 import { setConfig } from './stores'
 import { HeaderConfig } from './types'
 
+export * from './assets'
 export * from './components'
 export * from './router'
 export * from './types'

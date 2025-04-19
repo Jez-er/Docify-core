@@ -9,20 +9,37 @@
 
 .header__logo {
 	display: flex;
+	align-items: center;
 	gap: 0.5vw;
+}
+
+.header__logo__img {
+	max-width: 3.5vw;
+	max-height: 3.5vw;
 }
 
 .header__logo__title {
 	font-size: 24px;
 	font-weight: 600;
+	margin: 0;
+	color: white;
+	text-decoration: none;
 }
 
 .header__navigation {
 	display: flex;
-	gap: 1vw;
+	gap: 1.3vw;
 }
 
 .header__navigation__item {
 	font-size: 18px;
 	font-weight: 500;
+	color: white;
+	transition: all;
+	transition-duration: 300;
+	text-decoration: none;
+}
+
+.header__navigation__item:hover {
+	color: var(--accent-color);
 }
